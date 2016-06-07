@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,13 +29,13 @@ namespace BackEnd
             bool result = true;
             switch(typeOfOperation)
             {
-                case TypeOfOperation.GET: return getDocument(document);
-                case TypeOfOperation.POST: postDocuemtn(document); break;
+                case TypeOfOperation.GET:  getDocumentByKeyValue(document,"",""); break;
+                case TypeOfOperation.POST: postDocument(document); break;
             }
             return result;
         }
 
-        private async void postDocuemtn(Document<T> document)
+        private async void postDocument(Document<T> document)
         {
             try
             {
@@ -46,9 +47,10 @@ namespace BackEnd
             }
         }
 
-        private bool getDocument(Document<T> document)
+        private async void  getDocumentByKeyValue(Document<T> document,string key, string value)
         {
-            throw new NotImplementedException();
+            var filter = Builders<BsonDocument>.Filter.Eq(key, value);
+            var result = await _collection.collection.Find(filter).ToListAsync();
         }
     }
 }
