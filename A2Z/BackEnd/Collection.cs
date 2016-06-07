@@ -9,7 +9,7 @@ namespace BackEnd
 {
     class Collection
     {
-        MongoDB.Driver.IMongoCollection<BsonDocument> collection;
+        public MongoDB.Driver.IMongoCollection<BsonDocument> collection;
         public long count { get { return collection.Count(new BsonDocument()); } }
         public string collectionName = "Dummy";
         public Collection(MongoDB.Driver.IMongoDatabase db)

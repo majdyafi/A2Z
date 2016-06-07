@@ -12,7 +12,7 @@ namespace BackEnd
     {
         public MongoClient client;
         private Connection instance;
-        public static Connection Instance { get { return Instance??new Connection(); } }
+        public static Connection Instance { get { return Instance??new Connection("admindb",""); } }
         private Connection(string dbuser="", string password="")
         {
             client = new MongoClient(string.Format("mongodb://{0}:{1}@ds036709.mlab.com:36709/majddb",dbuser,password));

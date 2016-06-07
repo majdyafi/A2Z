@@ -31,19 +31,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MongoDB.Bson">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\CSharpDriver\MongoDB.Bson.dll</HintPath>
+      <HintPath>..\Assemblies\MongoDB.Bson.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\CSharpDriver\MongoDB.Driver.dll</HintPath>
+      <HintPath>..\Assemblies\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver.Core">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\CSharpDriver\MongoDB.Driver.Core.dll</HintPath>
+      <HintPath>..\Assemblies\MongoDB.Driver.Core.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver.GridFS">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\CSharpDriver\MongoDB.Driver.GridFS.dll</HintPath>
+      <HintPath>..\Assemblies\MongoDB.Driver.GridFS.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver.Legacy">
-      <HintPath>..\..\..\..\..\Documents\Visual Studio 2015\Projects\CSharpDriver\MongoDB.Driver.Legacy.dll</HintPath>
+      <HintPath>..\Assemblies\MongoDB.Driver.Legacy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +58,8 @@
     <Compile Include="Collection.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="DocumentSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
