@@ -10,7 +10,7 @@ namespace BackEndConsole
     {
         static void Main(string[] args)
         {
-            new BackEnd.Connection();
+            BackEnd.Connection.Instance.ToString();
         }
     }
 }

@@ -20,5 +20,7 @@ namespace StudentsService.Models
         }
 
         public System.Data.Entity.DbSet<StudentsService.Models.Student> Students { get; set; }
+
+        public System.Data.Entity.DbSet<StudentsService.Models.StudentDetail> StudentDetails { get; set; }
     }
 }
